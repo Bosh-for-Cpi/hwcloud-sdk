@@ -1,22 +1,25 @@
-require "../connection"
-require 'describe_instances'
-require 'describe_security_groups'
-require 'describe_key_pairs'
-require 'describe_volumes'
-require 'create_volume'
-require 'delete_volume'
-require 'attach_volume'
-require 'detach_volume'
-require 'reboot_instances'
-require 'terminate_instances'
-require 'run_instances'
-require 'stop_instances'
-require 'associate_address'
-require 'disassociate_address'
-require 'describe_images'
-require 'describe_images_by_name'
-require 'create_image'
-require 'delete_images'
+__LIB_DIR__ = File.expand_path(File.dirname(__FILE__))
+$LOAD_PATH.unshift __LIB_DIR__ unless $LOAD_PATH.include?(__LIB_DIR__)
+
+require "connection"
+require 'requests/describe_instances'
+require 'requests/describe_security_groups'
+require 'requests/describe_key_pairs'
+require 'requests/describe_volumes'
+require 'requests/create_volume'
+require 'requests/delete_volume'
+require 'requests/attach_volume'
+require 'requests/detach_volume'
+require 'requests/reboot_instances'
+require 'requests/terminate_instances'
+require 'requests/run_instances'
+require 'requests/stop_instances'
+require 'requests/associate_address'
+require 'requests/disassociate_address'
+require 'requests/describe_images'
+require 'requests/describe_images_by_name'
+require 'requests/create_image'
+require 'requests/delete_images'
 
 module  HwCloud
 
