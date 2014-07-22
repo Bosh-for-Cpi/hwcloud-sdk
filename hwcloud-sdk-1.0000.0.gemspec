@@ -7,7 +7,7 @@ require File.expand_path('../lib/requests/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'hwcloud-sdk'
-  s.version     = 1.0000.0
+  s.version     = '1.0000.0'
   s.platform    = Gem::Platform::RUBY
   s.summary     = 'Huawei Cloud SDK'
   s.description = "Huawei Cloud SDK\n#{`git rev-parse HEAD`[0, 6]}"
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.email       = 'support@cloudfoundry.com'
   s.required_ruby_version = Gem::Requirement.new('>= 1.9.3')
 
-  s.files        = Dir.glob("lib/**/*") + %w(README.md USAGE.md)
+  s.files        = Dir.glob("lib/**/*") + %w(README.md)
   s.require_path = 'lib'
 
   s.add_dependency('builder')

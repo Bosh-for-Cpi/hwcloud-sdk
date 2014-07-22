@@ -1,6 +1,7 @@
 __LIB_DIR__ = File.expand_path(File.dirname(__FILE__))
 $LOAD_PATH.unshift __LIB_DIR__ unless $LOAD_PATH.include?(__LIB_DIR__)
 
+require 'multi_json'
 require "connection"
 require 'requests/describe_instances'
 require 'requests/describe_security_groups'
@@ -113,7 +114,7 @@ module  HwCloud
                     :path     => @path,
                     :query    => @query
                                                     }))
-
+	return MultiJson.load(response.body)
 
       end
     end
