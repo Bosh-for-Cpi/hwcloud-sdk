@@ -23,9 +23,11 @@ service = HwCloud::HwCloudSdk.new({
                                   })
 
 options={
-    
+  :PublicIp => '221.194.146.146',
+  :InstanceId => 'i-439E08BB',
+  :Reverse => true
 }
-reponse=service.describe_images(options)
+reponse=service.describe_addresses(options)
 
 puts "****************************test.rb reponse.body***************************************"
 puts reponse.body

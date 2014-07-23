@@ -15,6 +15,7 @@ require 'requests/reboot_instances'
 require 'requests/terminate_instances'
 require 'requests/run_instances'
 require 'requests/stop_instances'
+require 'requests/describe_addresses'
 require 'requests/associate_address'
 require 'requests/disassociate_address'
 require 'requests/describe_images'
@@ -114,7 +115,7 @@ module  HwCloud
                     :path     => @path,
                     :query    => @query
                                                     }))
-	return MultiJson.load(response.body)
+		return MultiJson.load(response.body)
 
       end
     end

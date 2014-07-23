@@ -7,7 +7,7 @@ require "base64"
 require 'uri'
 
 require '../connection'
-require '../huaweicloud'
+require '../hwcloud-sdk'
 
 
 

@@ -7,7 +7,7 @@ require "base64"
 require 'uri'
 
 require '../connection'
-require '../huaweicloud'
+require '../hwcloud-sdk'
 
 
 
@@ -26,6 +26,6 @@ options={
     :'KeyName[0]' => 'vsg_595',
 }
 
-reponse=service.describe_key_pairs  options
+reponse=service.describe_key_pairs(options)
 puts "****************************test.rb reponse.body***************************************"
 puts reponse.body

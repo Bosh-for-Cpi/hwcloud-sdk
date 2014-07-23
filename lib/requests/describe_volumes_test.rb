@@ -7,7 +7,7 @@ require "base64"
 require 'uri'
 
 require '../connection'
-require '../huaweicloud'
+require '../hwcloud-sdk'
 
 
 
@@ -23,7 +23,7 @@ service = HwCloud::HwCloudSdk.new({
                                   })
 
 options={
-#    :'VolumeId[0]'          => 'vol-506F08BF',
+    :'VolumeId[0]'          => 'vol-506F08BF',
     :AvailabilityZone  =>  'b451c1ea3c8d4af89d03e5cacf1e4276'
 }
 reponse=service.describe_volumes(options)

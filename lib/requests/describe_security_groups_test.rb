@@ -7,7 +7,7 @@ require "base64"
 require 'uri'
 
 require '../connection'
-require '../huaweicloud'
+require '../hwcloud-sdk'
 
 
 
@@ -23,10 +23,10 @@ service = HwCloud::HwCloudSdk.new({
                                   })
 
 options={
-    :'KeyName[0]' => 'vsg_595',
+
 }
 
-reponse=service.describe_security_groups
+reponse=service.describe_security_groups(options)
 
 puts "****************************test.rb reponse.body***************************************"
 puts reponse.body
