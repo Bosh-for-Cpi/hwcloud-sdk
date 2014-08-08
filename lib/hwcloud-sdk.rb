@@ -55,7 +55,7 @@ module  HwCloud
 
         @hwsaccesskeyid=options[:HWSAccessKeyId]
         @signaturemethod=options[:SignatureMethod]
-        @signaturenonce=options[:SignatureNonce]
+        #@signaturenonce=options[:SignatureNonce]
         @signatureversion=options[:SignatureVersion]
         @version=options[:version]
         @regionname=options[:RegionName]
@@ -82,6 +82,9 @@ module  HwCloud
         @signParameter[:Action] =params[:Action]
         sumpara=@signParameter.merge params[:query]
 
+
+        sinaturenonce = rand(100000)
+        sumpara[:SignatureNonce] = signaturenonce
         puts "----------------------------------huaweicloud.rb---------request.sumpara---------------------------------"
         puts sumpara
         puts "******************************************************************\n\n"
